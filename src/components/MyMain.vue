@@ -2,20 +2,21 @@
   <div class="extensions">
     <v-container>
       <v-row>
-        <v-col cols="12" sm="6" lg="4" v-for="k in FilteredExtensions" :key="k.iid" class="pa-1 my-1">
-          <v-card class="rounded-xl bg-surface border border-primary" elevation="1">
+        <v-col cols="12" sm="6" lg="4" v-for="k in FilteredExtensions" :key="k.iid" class="pa-1">
+          <v-card class="rounded-xl bg-surface border border-primary d-flex flex-column justify-space-between" elevation="1" height="250">
 
             <v-card-text class="d-flex align-start pa-5" style="gap: 18px">
               <img :src="k.logo" alt="" class="" width="60" height="60" />
-            <v-card-text class="pa-0 pe-4">
+            <v-card-text class="pa-0 pr-5">
               <h2 style="transform: translateY(-1px)" class="text-primary">{{ k.name }}</h2>
               <p class="pt-1 d-flex text-secondary" style="font-size: 16px">
                 {{ k.description }}
               </p>
             </v-card-text>
           </v-card-text>
-
-          <v-card-actions class="px-5 pb-3 pt-4">
+          
+          
+          <v-card-actions class="px-5 pb-3" color="transparent">
             <v-btn variant="outlined" elevation="0" class="rounded-xl px-3" style="text-transform: none;font-weight: 700;border: 1px solid grey" color="secondary" @click="rmExt(k.iid)">
               Remove
             </v-btn>
