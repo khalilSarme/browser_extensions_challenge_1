@@ -14,7 +14,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/browser_extensions_challenge_1/",
+  base: "/",
   plugins: [
     VueRouter(),
     Layouts(),
